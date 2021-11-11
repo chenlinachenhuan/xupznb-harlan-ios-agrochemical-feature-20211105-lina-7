@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="expert" id="gTV-IL-0wX" customClass="expertCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="74" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="74" height="125"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="u=2621658848,3952322712&amp;fm=193&amp;f=GIF.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="LOx-AM-33u">
+                        <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="74" id="18N-wq-Rie"/>
+                            <constraint firstAttribute="width" constant="74" id="sWu-nH-TgG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王钢蛋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmz-9n-Oh7">
+                        <rect key="frame" x="0.0" y="84" width="74" height="21"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="领域：苹果" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBm-9h-eeB">
+                        <rect key="frame" x="0.0" y="110.5" width="74" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.61383992430000001" green="0.61394590140000005" blue="0.61382502319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <color key="backgroundColor" red="0.97275787589999996" green="0.97967916730000004" blue="0.98318642379999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dmz-9n-Oh7" firstAttribute="top" secondItem="LOx-AM-33u" secondAttribute="bottom" constant="10" id="1RA-T9-JNa"/>
+                <constraint firstAttribute="trailing" secondItem="wBm-9h-eeB" secondAttribute="trailing" id="3Me-sb-ndT"/>
+                <constraint firstItem="LOx-AM-33u" firstAttribute="centerX" secondItem="SEy-5g-ep8" secondAttribute="centerX" id="3fr-PE-6xk"/>
+                <constraint firstAttribute="bottom" secondItem="wBm-9h-eeB" secondAttribute="bottom" id="D4k-HQ-lOC"/>
+                <constraint firstItem="dmz-9n-Oh7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Hbt-fM-mCW"/>
+                <constraint firstItem="wBm-9h-eeB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VsV-SM-O5P"/>
+                <constraint firstAttribute="trailing" secondItem="dmz-9n-Oh7" secondAttribute="trailing" id="ZvR-nT-bC9"/>
+                <constraint firstItem="LOx-AM-33u" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="caY-0S-6bc"/>
+                <constraint firstItem="dmz-9n-Oh7" firstAttribute="centerX" secondItem="LOx-AM-33u" secondAttribute="centerX" id="eFP-hv-T43"/>
+                <constraint firstItem="wBm-9h-eeB" firstAttribute="centerX" secondItem="LOx-AM-33u" secondAttribute="centerX" id="fGC-kU-R35"/>
+            </constraints>
+            <size key="customSize" width="172" height="125"/>
+            <connections>
+                <outlet property="headImageV" destination="LOx-AM-33u" id="ces-Io-XRn"/>
+                <outlet property="nameL" destination="dmz-9n-Oh7" id="hWN-my-emx"/>
+                <outlet property="typeL" destination="wBm-9h-eeB" id="GsN-Eq-8Yv"/>
+            </connections>
+            <point key="canvasLocation" x="-26.086956521739133" y="96.763392857142847"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="u=2621658848,3952322712&amp;fm=193&amp;f=GIF.jpeg" width="1200" height="799"/>
+    </resources>
+</document>

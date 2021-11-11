@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="productListCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="214"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="128" height="214"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CJ6-mh-F2R">
+                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="CJ6-mh-F2R" secondAttribute="height" id="Zf7-4c-6zB"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiT-QB-iyu">
+                        <rect key="frame" x="10" y="133.5" width="108" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u07-m8-d8s">
+                        <rect key="frame" x="12" y="181" width="8" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        <color key="textColor" red="0.99215686274509807" green="0.16470588235294117" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="499" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abB-rD-TTU">
+                        <rect key="frame" x="20" y="176" width="34" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.99215686270000003" green="0.1647058824" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="u07-m8-d8s" firstAttribute="top" secondItem="BiT-QB-iyu" secondAttribute="bottom" constant="11.5" id="81W-0H-xwT"/>
+                <constraint firstItem="BiT-QB-iyu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="JVX-dR-ON1"/>
+                <constraint firstItem="CJ6-mh-F2R" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Kgj-uu-D1f"/>
+                <constraint firstAttribute="trailing" secondItem="CJ6-mh-F2R" secondAttribute="trailing" id="Uav-eY-fKj"/>
+                <constraint firstItem="u07-m8-d8s" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="VXV-cL-6pz"/>
+                <constraint firstItem="CJ6-mh-F2R" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Zjo-Uz-GzI"/>
+                <constraint firstItem="abB-rD-TTU" firstAttribute="baseline" secondItem="u07-m8-d8s" secondAttribute="baseline" id="mob-eW-rqX"/>
+                <constraint firstItem="BiT-QB-iyu" firstAttribute="top" secondItem="CJ6-mh-F2R" secondAttribute="bottom" constant="5.5" id="p8N-lk-JdP"/>
+                <constraint firstItem="abB-rD-TTU" firstAttribute="leading" secondItem="u07-m8-d8s" secondAttribute="trailing" id="xky-w2-BMr"/>
+                <constraint firstAttribute="trailing" secondItem="BiT-QB-iyu" secondAttribute="trailing" constant="10" id="yOd-0Y-XdR"/>
+            </constraints>
+            <size key="customSize" width="128" height="214"/>
+            <connections>
+                <outlet property="imageV" destination="CJ6-mh-F2R" id="V4c-qc-wV2"/>
+                <outlet property="money" destination="abB-rD-TTU" id="rSA-fo-gro"/>
+                <outlet property="title" destination="BiT-QB-iyu" id="ZDD-uo-9cZ"/>
+            </connections>
+            <point key="canvasLocation" x="147.82608695652175" y="106.47321428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>
