@@ -1,0 +1,248 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - AliyunOSSiOS (2.10.10)
+  - Masonry (1.1.0)
+  - MJRefresh (3.5.0)
+  - MMLayout (0.3.0)
+  - ReactiveObjC (3.1.1)
+  - SDWebImage (5.9.0):
+    - SDWebImage/Core (= 5.9.0)
+  - SDWebImage/Core (5.9.0)
+  - SuperPlayer (3.2.2):
+    - AFNetworking
+    - Masonry
+    - MMLayout
+    - SDWebImage
+    - SuperPlayer/Player (= 3.2.2)
+  - SuperPlayer/Player (3.2.2):
+    - AFNetworking
+    - Masonry
+    - MMLayout
+    - SDWebImage
+    - TXLiteAVSDK_Player (= 7.1.8775)
+  - TUIChat (5.7.1435):
+    - TUIChat/Cell (= 5.7.1435)
+    - TUIChat/DataProvider (= 5.7.1435)
+    - TUIChat/Service (= 5.7.1435)
+    - TUIChat/UI (= 5.7.1435)
+    - TUIChat/VoiceConvert (= 5.7.1435)
+    - TUICore (= 5.7.1435)
+  - TUIChat/Cell (5.7.1435):
+    - TUIChat/Cell/CellData (= 5.7.1435)
+    - TUIChat/Cell/CellUI (= 5.7.1435)
+    - TUICore (= 5.7.1435)
+  - TUIChat/Cell/CellData (5.7.1435):
+    - TUIChat/Cell/CellData/Base (= 5.7.1435)
+    - TUIChat/Cell/CellData/Chat (= 5.7.1435)
+    - TUIChat/Cell/CellData/Custom (= 5.7.1435)
+    - TUICore (= 5.7.1435)
+  - TUIChat/Cell/CellData/Base (5.7.1435):
+    - TUIChat/VoiceConvert
+    - TUICore (= 5.7.1435)
+  - TUIChat/Cell/CellData/Chat (5.7.1435):
+    - TUIChat/Cell/CellData/Base
+    - TUICore (= 5.7.1435)
+  - TUIChat/Cell/CellData/Custom (5.7.1435):
+    - TUIChat/Cell/CellData/Chat
+    - TUICore (= 5.7.1435)
+  - TUIChat/Cell/CellUI (5.7.1435):
+    - TUIChat/Cell/CellUI/Base (= 5.7.1435)
+    - TUIChat/Cell/CellUI/Chat (= 5.7.1435)
+    - TUIChat/Cell/CellUI/Custom (= 5.7.1435)
+    - TUICore (= 5.7.1435)
+  - TUIChat/Cell/CellUI/Base (5.7.1435):
+    - TUIChat/Cell/CellData
+    - TUICore (= 5.7.1435)
+  - TUIChat/Cell/CellUI/Chat (5.7.1435):
+    - TUIChat/Cell/CellUI/Base
+    - TUICore (= 5.7.1435)
+  - TUIChat/Cell/CellUI/Custom (5.7.1435):
+    - TUIChat/Cell/CellUI/Chat
+    - TUICore (= 5.7.1435)
+  - TUIChat/DataProvider (5.7.1435):
+    - TUIChat/Cell
+    - TUICore (= 5.7.1435)
+  - TUIChat/Service (5.7.1435):
+    - TUIChat/UI
+    - TUICore (= 5.7.1435)
+  - TUIChat/UI (5.7.1435):
+    - TUIChat/UI/Base (= 5.7.1435)
+    - TUIChat/UI/Chat (= 5.7.1435)
+    - TUIChat/UI/Forward (= 5.7.1435)
+    - TUIChat/UI/Input (= 5.7.1435)
+    - TUIChat/UI/Pendency (= 5.7.1435)
+    - TUICore (= 5.7.1435)
+  - TUIChat/UI/Base (5.7.1435):
+    - TUIChat/UI/Base/Camera (= 5.7.1435)
+    - TUIChat/UI/Base/Media (= 5.7.1435)
+    - TUICore (= 5.7.1435)
+  - TUIChat/UI/Base/Camera (5.7.1435):
+    - TUIChat/DataProvider
+    - TUICore (= 5.7.1435)
+  - TUIChat/UI/Base/Media (5.7.1435):
+    - TUIChat/UI/Base/Camera
+    - TUICore (= 5.7.1435)
+  - TUIChat/UI/Chat (5.7.1435):
+    - TUIChat/UI/Forward
+    - TUIChat/UI/Input
+    - TUIChat/UI/Pendency
+    - TUICore (= 5.7.1435)
+  - TUIChat/UI/Forward (5.7.1435):
+    - TUIChat/UI/Base
+    - TUICore (= 5.7.1435)
+  - TUIChat/UI/Input (5.7.1435):
+    - TUIChat/UI/Base
+    - TUICore (= 5.7.1435)
+  - TUIChat/UI/Pendency (5.7.1435):
+    - TUIChat/UI/Base
+    - TUICore (= 5.7.1435)
+  - TUIChat/VoiceConvert (5.7.1435):
+    - TUICore (= 5.7.1435)
+  - TUIContact (5.7.1435):
+    - TUIContact/Cell (= 5.7.1435)
+    - TUIContact/DataProvider (= 5.7.1435)
+    - TUIContact/Service (= 5.7.1435)
+    - TUIContact/UI (= 5.7.1435)
+  - TUIContact/Cell (5.7.1435):
+    - TUIContact/Cell/CellData (= 5.7.1435)
+    - TUIContact/Cell/CellUI (= 5.7.1435)
+  - TUIContact/Cell/CellData (5.7.1435):
+    - TUICore (= 5.7.1435)
+  - TUIContact/Cell/CellUI (5.7.1435):
+    - TUIContact/Cell/CellData
+  - TUIContact/DataProvider (5.7.1435):
+    - TUIContact/Cell
+  - TUIContact/Service (5.7.1435):
+    - TUIContact/UI
+  - TUIContact/UI (5.7.1435):
+    - TUIContact/DataProvider
+  - TUIConversation (5.7.1435):
+    - TUIConversation/Cell (= 5.7.1435)
+    - TUIConversation/DataProvider (= 5.7.1435)
+    - TUIConversation/Service (= 5.7.1435)
+    - TUIConversation/UI (= 5.7.1435)
+  - TUIConversation/Cell (5.7.1435):
+    - TUIConversation/Cell/CellData (= 5.7.1435)
+    - TUIConversation/Cell/CellUI (= 5.7.1435)
+  - TUIConversation/Cell/CellData (5.7.1435):
+    - TUICore (= 5.7.1435)
+  - TUIConversation/Cell/CellUI (5.7.1435):
+    - TUIConversation/Cell/CellData
+  - TUIConversation/DataProvider (5.7.1435):
+    - TUIConversation/Cell
+  - TUIConversation/Service (5.7.1435):
+    - TUIConversation/UI
+  - TUIConversation/UI (5.7.1435):
+    - TUIConversation/DataProvider
+  - TUICore (5.7.1435):
+    - ReactiveObjC (= 3.1.1)
+    - SDWebImage (= 5.9.0)
+    - TXIMSDK_Plus_iOS (= 5.7.1435)
+  - TUIGroup (5.7.1435):
+    - TUIGroup/Cell (= 5.7.1435)
+    - TUIGroup/DataProvider (= 5.7.1435)
+    - TUIGroup/Service (= 5.7.1435)
+    - TUIGroup/UI (= 5.7.1435)
+  - TUIGroup/Cell (5.7.1435):
+    - TUIGroup/Cell/CellData (= 5.7.1435)
+    - TUIGroup/Cell/CellUI (= 5.7.1435)
+  - TUIGroup/Cell/CellData (5.7.1435):
+    - TUICore (= 5.7.1435)
+  - TUIGroup/Cell/CellUI (5.7.1435):
+    - TUIGroup/Cell/CellData
+  - TUIGroup/DataProvider (5.7.1435):
+    - TUIGroup/Cell
+  - TUIGroup/Service (5.7.1435):
+    - TUIGroup/UI
+  - TUIGroup/UI (5.7.1435):
+    - TUIGroup/DataProvider
+  - TUISearch (5.7.1435):
+    - TUISearch/Cell (= 5.7.1435)
+    - TUISearch/DataProvider (= 5.7.1435)
+    - TUISearch/Service (= 5.7.1435)
+    - TUISearch/UI (= 5.7.1435)
+  - TUISearch/Cell (5.7.1435):
+    - TUISearch/Cell/CellData (= 5.7.1435)
+    - TUISearch/Cell/CellUI (= 5.7.1435)
+  - TUISearch/Cell/CellData (5.7.1435):
+    - TUICore (= 5.7.1435)
+  - TUISearch/Cell/CellUI (5.7.1435):
+    - TUISearch/Cell/CellData
+  - TUISearch/DataProvider (5.7.1435):
+    - TUISearch/Cell
+  - TUISearch/Service (5.7.1435):
+    - TUISearch/UI
+  - TUISearch/UI (5.7.1435):
+    - TUISearch/DataProvider
+  - TXIMSDK_Plus_iOS (5.7.1435)
+  - TXLiteAVSDK_Player (7.1.8775)
+  - WechatOpenSDK (1.8.7.1)
+
+DEPENDENCIES:
+  - AliyunOSSiOS
+  - Masonry
+  - MJRefresh
+  - SuperPlayer
+  - TUIChat
+  - TUIContact
+  - TUIConversation
+  - TUIGroup
+  - TUISearch
+  - WechatOpenSDK
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AliyunOSSiOS
+    - Masonry
+    - MJRefresh
+    - MMLayout
+    - ReactiveObjC
+    - SDWebImage
+    - SuperPlayer
+    - TUIChat
+    - TUIContact
+    - TUIConversation
+    - TUICore
+    - TUIGroup
+    - TUISearch
+    - TXIMSDK_Plus_iOS
+    - TXLiteAVSDK_Player
+    - WechatOpenSDK
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AliyunOSSiOS: b8f1dfc229cd9abf68c8ee0cb245c2d66e00dd96
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  MMLayout: d559edecd69fbcb348368ba90917e047ab1c544e
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
+  SuperPlayer: 8572ea30d64c5cbb476177992527fec0a234271e
+  TUIChat: b19d781228d43e4dd3de56c7759e170ef39fac61
+  TUIContact: 87021efcdbf24116e72ca697c962d6578046441f
+  TUIConversation: 0a50b8e0d8b70e7d24994f68fac489e3aa51fd0d
+  TUICore: 00277160c1e89c367cbbbc3bdaff373035f157a1
+  TUIGroup: e655402d6deb05e6a6803c6dd537f8e50c95af50
+  TUISearch: e0942183aaac69df68a625ef5ba2fda99dc16e9d
+  TXIMSDK_Plus_iOS: 4b7c1097ea9899f7bf95fa90e2cb4471389f93dd
+  TXLiteAVSDK_Player: 66ec5d2007064e4ff6205e5bd2b9e1cc1dc5f643
+  WechatOpenSDK: 6a4d1436c15b3b5fe2a0bd383f3046010186da44
+
+PODFILE CHECKSUM: 88c98b17acb953dc7c4ed948c5bf18fbb1295c14
+
+COCOAPODS: 1.10.2

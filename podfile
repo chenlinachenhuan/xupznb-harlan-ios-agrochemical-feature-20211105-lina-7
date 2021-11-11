@@ -1,0 +1,21 @@
+platform :ios, ‘9.0’
+install! 'cocoapods', :disable_input_output_paths => true
+
+target ‘Agrochemical' do 
+source 'https://github.com/CocoaPods/Specs.git'
+pod 'Masonry'
+pod 'MJRefresh'
+pod 'AliyunOSSiOS'
+pod 'WechatOpenSDK'
+pod 'SuperPlayer'
+pod 'TUIChat'
+pod 'TUIConversation'
+pod 'TUIContact'
+pod 'TUIGroup'
+pod 'TUISearch'
+
+end
+target ‘AgrochemicalTests' do 
+end
+target ‘AgrochemicalUITests' do 
+end

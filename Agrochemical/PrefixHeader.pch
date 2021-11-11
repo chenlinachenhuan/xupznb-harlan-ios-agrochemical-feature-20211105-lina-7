@@ -1,0 +1,204 @@
+//
+//  PrefixHeader.pch
+//  Agrochemical
+//
+//  Created by HarLan on 2021/9/6.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+//----------------头文件------------------
+#ifdef __OBJC__
+#import "Masonry.h"
+#import "AppDelegate.h"
+#import "UIImageView+WebCache.h"
+#import "commonMethod.h"
+#import <objc/message.h>
+#import "bigButton.h"
+#import "commonNaviView.h"
+#import "MJRefresh.h"
+#import "ChrysanthemumIndexView.h"
+#import "iToast.h"
+#import <AliyunOSSiOS/OSSService.h>
+#import "AliyunOSSUpload.h"
+#import "rootViewController.h"
+#import "NSMutableArray+CLNArray.h"
+#import "WXApi.h"
+#import <SuperPlayer/SuperPlayer.h>
+#endif
+//---------------------------------------
+//----------------基础宏定义---------------
+#define statusBarHeight  ([[UIApplication sharedApplication] statusBarFrame].size.height)
+#define navBarHeight 44.0
+#define TopHeight (statusBarHeight + navBarHeight)
+//获取设备的物理高度
+#define heightS [UIScreen mainScreen].bounds.size.height-statusBarHeight-49
+#define ScreenHeight (statusBarHeight>20?heightS-20:heightS)
+#define ScreenH (statusBarHeight>20?[UIScreen mainScreen].bounds.size.height-34:[UIScreen mainScreen].bounds.size.height)
+#define ScreenHeight1 (statusBarHeight>20?[UIScreen mainScreen].bounds.size.height-20:[UIScreen mainScreen].bounds.size.height)
+#define FullScreenHeight  [UIScreen mainScreen].bounds.size.height
+
+//获取设备的物理宽度
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+#define colorH(a,b,c) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:1]
+#define Agro_appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define homeSpacing 16
+#define FontSize(a) [UIFont fontWithName:@"PingFang SC" size:a]
+#define BackGroundColor [UIColor colorWithRed:248/255.0 green:250/255.0 blue:251/255.0 alpha:1.0]
+#define SelectColor [UIColor colorWithRed:98/255.0 green:191/255.0 blue:180/255.0 alpha:1.0]
+#define CommonColor [UIColor colorWithRed:162/255.0 green:166/255.0 blue:172/255.0 alpha:1.0]
+#define WeatherKEY @"4e43fd46679e4b798260ed8c1cc57450"
+#define WeatherUrl @"https://devapi.qweather.com/v7/weather/now"
+#define testImage @"u=2621658848,3952322712&fm=193&f=GIF.jpeg"
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define FBUtilShowTipView(view,text) dispatch_async(dispatch_get_main_queue(), ^{\
+[commonMethod showTipHUDView:view title:text detail:@""];\
+});
+#define placeHolderImage [UIImage imageNamed:@"默认头像"]
+
+//---------------------------------------
+//----------host-------------------------
+
+//#define Agro_officeHost @"http://192.168.0.228:8086"
+#define Agro_testHost @"https://agrochemical-api.e2s4w.chinaharlan.com"
+#ifdef Agro_officeHost
+#define Agro_host  Agro_officeHost
+#else
+#define Agro_host  Agro_testHost
+#endif
+//---------------------------------------
+
+//----------Request----------------------
+//通用
+#define Request_childrenByPid [NSString stringWithFormat:@"%@%@",Agro_host,@"/sys/dict/childrenByPid"]//根据父级id取字典列表按作物分类333
+
+//登录与注册
+#define Request_register [NSString stringWithFormat:@"%@%@",Agro_host,@"/sso/register"]
+#define Request_login [NSString stringWithFormat:@"%@%@",Agro_host,@"/sso/login"]
+#define Request_sendMsg [NSString stringWithFormat:@"%@%@",Agro_host,@"/sso/sendMsg"]
+#define Request_verifyAuthCode [NSString stringWithFormat:@"%@%@",Agro_host,@"/sso/verifyAuthCode"]
+#define Request_resetPassword [NSString stringWithFormat:@"%@%@",Agro_host,@"/sso/resetPassword"]
+
+//新闻资讯
+#define Request_news [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/news/list"]
+#define Request_newsDetail [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/news/item/"]
+#define Request_newsCommentList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/news/commentList"]
+#define Request_newsCommentUP [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/news/comment/create"]
+#define Request_newsCommentReport [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/news/comment/report/"]
+#define Request_newsCommentFabulous [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/news/comment/fabulous/"]
+#define Request_newsCommentDelete [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/news/comment/delete/"]
+#define Request_newsCommentCancelFabulous [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/news/comment/cancelFabulous/"]
+//天气
+#define Request_weatherNew [NSString stringWithFormat:@"%@%@",Agro_host,@"/sys/weather/q/now"]
+//动态
+#define Request_trendList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/trends/list"]
+#define Request_trendcommentList [NSString stringWithFormat:@"%@%@",Agro_host,@"/trends/commentList"]
+#define Request_trendcommentCreate [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/trends/comment/create"]
+#define Request_trendCreate [NSString stringWithFormat:@"%@%@",Agro_host,@"/trends/create"]
+#define Request_OSS  [NSString stringWithFormat:@"%@%@",Agro_host,@"/aliyun/oss/token"]
+#define Request_trendDelete  [NSString stringWithFormat:@"%@%@",Agro_host,@"/trends/delete/"]
+#define Request_trendfabulous  [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/trends/fabulous/"]
+#define Request_trendCommentChildList  [NSString stringWithFormat:@"%@%@",Agro_host,@"/trends/commentChildList"]
+
+//红人
+#define Request_rankingList  [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/ranking/list"]
+#define Request_LikeList  [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/ranking/detail/list/"]
+
+//收货地址
+#define Request_areaList  [NSString stringWithFormat:@"%@%@",Agro_host,@"/sys/area/list"]
+#define Request_addAddress  [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/address/add"]
+#define Request_deleteAddress  [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/address/delete/"]
+#define Request_allAddress  [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/address/list"]
+#define Request_updateAddress  [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/address/update/"]
+#define Request_updateDefaultAddress  [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/address/updateDefault/"]
+#define Request_detailAddress  [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/address/"]
+//商城
+#define Request_productList  [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/product/list"]
+#define Request_ParentList  [NSString stringWithFormat:@"%@%@",Agro_host,@"/sys/dict/tree"]
+#define Request_productDetail  [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/product/item/"]
+#define Request_productCartAdd  [NSString stringWithFormat:@"%@%@",Agro_host,@"/cart/add"]
+#define Request_productCartClear  [NSString stringWithFormat:@"%@%@",Agro_host,@"/cart/clear"]
+#define Request_productCartDelete  [NSString stringWithFormat:@"%@%@",Agro_host,@"/cart/delete"]
+#define Request_productCartList [NSString stringWithFormat:@"%@%@",Agro_host,@"/cart/list"]
+#define Request_productCartUpdate [NSString stringWithFormat:@"%@%@",Agro_host,@"/cart/update/quantity"]
+#define Request_productCartgetNum [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/cart/getNum"]
+#define Request_generateConfirmOrder [NSString stringWithFormat:@"%@%@",Agro_host,@"/order/generateConfirmOrder"]
+#define Request_generateOrder [NSString stringWithFormat:@"%@%@",Agro_host,@"/order/generateOrder"]
+#define Request_wechatPay [NSString stringWithFormat:@"%@%@",Agro_host,@"/wxPay/appPay"]
+#define Request_AliPay [NSString stringWithFormat:@"%@%@",Agro_host,@"/aliPay/appPay"]
+//banner
+#define Request_bannerCommon [NSString stringWithFormat:@"%@%@",Agro_host,@"/sys/positionInfo/common/"]
+//政策
+#define Request_policyList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/policy/list"]
+#define Request_policyItem [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/policy/item/"]
+#define Request_policyCommentList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/policy/commentList"]
+#define Request_policyReport [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/policy/comment/report/"]
+#define Request_policyFabulous [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/policy/comment/fabulous/"]
+#define Request_policyDelete [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/policy/comment/delete/"]
+#define Request_policyCreateComment [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/policy/comment/create"]
+#define Request_policyCancelFabulous [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/policy/comment/cancelFabulous/"]
+//技术小文摘
+#define Request_knowledgeList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/knowledge/list"]
+#define Request_knowledgeItem [NSString stringWithFormat:@"%@%@",Agro_host,@"/news/knowledge/"]
+#define Request_knowledgeCommentList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/news/commentList"]
+#define Request_knowledgeReport [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/news/comment/report/"]
+#define Request_knowledgeFabulous [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/news/comment/fabulous/"]
+#define Request_knowledgeDelete [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/news/comment/delete/"]
+#define Request_knowledgeCreateComment [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/news/comment/create"]
+#define Request_knowledgeCancelFabulous [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/news/comment/cancelFabulous/"]
+//致富之路
+#define Request_richList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/rich/news/list"]
+#define Request_richItem [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/rich/news/item/"]
+#define Request_richCommentList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/rich/news/commentList"]
+#define Request_richReport [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/rich/news/comment/report/"]
+#define Request_richFabulous [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/rich/news/comment/fabulous/"]
+#define Request_richDelete [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/rich/news/comment/delete/"]
+#define Request_richCreateComment [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/rich/news/comment/create"]
+#define Request_richCancelFabulous [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/rich/news/comment/cancelFabulous/"]
+//专家
+#define Request_proficientList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/proficient/list"]
+#define Request_proficientUpdateRemark [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/updateRemark"]
+#define Request_proficientUpdateNickName [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/updateNickName"]
+#define Request_proficientUpdateIcon [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/updateIcon"]
+#define Request_proficientInfo [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/proficient/update"]
+#define Request_proficientOnlineStatus [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/proficient/online/"]
+#define Request_proficientCollectionList [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/proficient/collectionList"]
+#define Request_proficientClass [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/proficient/class/"]
+#define Request_proficientAuth [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/proficient/auth"]
+#define Request_proficientFollow [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/follow/"]
+#define Request_proficientCancelFollow [NSString stringWithFormat:@"%@%@",Agro_host,@"/member/cancelFollow/"]
+//课程
+#define Request_classList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/curriculum/list"]
+#define Request_classItem [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/curriculum/item/"]
+#define Request_classUpdatePublish [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/updatePublish"]
+#define Request_classStudyList [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/studyList"]
+#define Request_classPolicy [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/policy"]
+#define Request_classPublishList [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/list"]
+#define Request_classFree [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/free/buy/"]
+#define Request_classFabulous [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/fabulous/"]
+#define Request_classCreate [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/create"]
+#define Request_classCollectionList [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/collectionList"]
+#define Request_classAddShare [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/addShare/"]
+#define Request_classUpdate [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/update/"]
+#define Request_classDelete [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/delete/"]
+//子课程
+#define Request_subClassList [NSString stringWithFormat:@"%@%@",Agro_host,@"/open/curriculum/detail/list"]
+#define Request_subClassDetail [NSString stringWithFormat:@"%@%@",Agro_host,@"/curriculum/detail/item/"]
+
+
+//---------------圈子------------------------
+#define circleCellWidth [UIScreen mainScreen].bounds.size.width - 2 * 16  //cell的宽度
+#define circleCellNameattributes @{NSFontAttributeName :[UIFont fontWithName:@"PingFang SC" size: 15]}  //昵称att
+#define circleCellNameFont [UIFont fontWithName:@"PingFang SC" size: 15]                                 //昵称字号
+#define circleCellTimeattributes @{NSFontAttributeName : [UIFont fontWithName:@"PingFang SC" size: 12] }  //时间att
+#define circleCellTimeFont [UIFont fontWithName:@"PingFang SC" size: 12]                               //时间字号
+#define circleCellTextattributes @{NSFontAttributeName : [UIFont fontWithName:@"PingFang SC" size: 14] }  //正文att
+#define circleCellTextFont [UIFont fontWithName:@"PingFang SC" size: 14]                              //正文字号
+#define circleCellPhotosWH (circleCellWidth - 2 * (circleCellMargin + circleCellPhotosMargin)) / 3                                                                                   //图片的宽高
+#define circleCellPhotosMargin 5                                                        //图片间距
+#define circleCellToolBarHeight 35                                                      //cell工具条高度
+#define circleCellToolBarTintColor [UIColor colorWithHexString:@"#ffffff"]              //工具条图标、字体颜色
+#define circleCellToolBarTittleFont [UIFont systemFontOfSize:14]                        //工具条btn字号
+//---------------------------------------
+#endif /* PrefixHeader_pch */
+ 
